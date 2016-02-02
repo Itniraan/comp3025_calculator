@@ -1,6 +1,7 @@
 //
 //  ViewController.swift
-//  calculator
+//  Calculator Assignment 1
+//  Author: Blake Murdock (200260568)
 //
 //  Created by student on 2016-02-02.
 //  Copyright © 2016 Blake. All rights reserved.
