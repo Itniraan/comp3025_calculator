@@ -26,29 +26,40 @@
                                 <rect key="frame" x="180" y="164" width="30" height="30"/>
                                 <state key="normal" title="9"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4HH-yT-xqH">
-                                <rect key="frame" x="180" y="219" width="30" height="30"/>
-                                <state key="normal" title="6"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3l-gU-Ij3">
                                 <rect key="frame" x="125" y="219" width="30" height="30"/>
                                 <state key="normal" title="5"/>
+                                <connections>
+                                    <action selector="fiveButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bVL-85-j9q"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHh-tJ-5Io">
                                 <rect key="frame" x="70" y="219" width="30" height="30"/>
                                 <state key="normal" title="4"/>
+                                <connections>
+                                    <action selector="fourButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4P5-hL-fTM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAW-i6-s2h">
                                 <rect key="frame" x="180" y="274" width="30" height="30"/>
                                 <state key="normal" title="3"/>
+                                <connections>
+                                    <action selector="threeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5kV-cI-tjT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSa-DF-tB3">
                                 <rect key="frame" x="125" y="274" width="30" height="30"/>
                                 <state key="normal" title="2"/>
+                                <connections>
+                                    <action selector="twoButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Ee-NN-czf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hoI-xn-5jP">
                                 <rect key="frame" x="70" y="274" width="30" height="30"/>
                                 <state key="normal" title="1"/>
+                                <connections>
+                                    <action selector="oneButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rZE-mS-JRo"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpx-aC-A8Z">
                                 <rect key="frame" x="70" y="109" width="30" height="30"/>
@@ -57,6 +68,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OXb-zA-Iyi">
                                 <rect key="frame" x="235" y="219" width="30" height="30"/>
                                 <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="plusButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p4L-Wd-1Cz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNq-io-wnj">
                                 <rect key="frame" x="125" y="109" width="30" height="30"/>
@@ -66,17 +80,33 @@
                                 <rect key="frame" x="180" y="109" width="30" height="30"/>
                                 <state key="normal" title="%"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qe6-T6-ZV1">
+                                <rect key="frame" x="235" y="109" width="30" height="30"/>
+                                <state key="normal" title="\"/>
+                                <connections>
+                                    <action selector="divisionButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lja-nn-cnQ"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xD0-nc-yAf">
                                 <rect key="frame" x="235" y="164" width="30" height="30"/>
                                 <state key="normal" title="*"/>
+                                <connections>
+                                    <action selector="multiplyButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UOD-cs-q2M"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4m-yK-hXc">
                                 <rect key="frame" x="235" y="274" width="30" height="30"/>
                                 <state key="normal" title="-"/>
+                                <connections>
+                                    <action selector="minusButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="chK-R1-vMp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cz4-JB-Soh">
                                 <rect key="frame" x="235" y="329" width="30" height="30"/>
                                 <state key="normal" title="="/>
+                                <connections>
+                                    <action selector="equalButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ijX-wI-FWN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="njL-hG-DAG">
                                 <rect key="frame" x="180" y="329" width="30" height="30"/>
@@ -89,14 +119,26 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Jb-Oo-90d">
                                 <rect key="frame" x="70" y="329" width="30" height="30"/>
                                 <state key="normal" title="0"/>
+                                <connections>
+                                    <action selector="zeroButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yex-q7-j1N"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MOd-rZ-Zvf">
                                 <rect key="frame" x="70" y="164" width="30" height="30"/>
                                 <state key="normal" title="7"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qe6-T6-ZV1">
-                                <rect key="frame" x="235" y="109" width="30" height="30"/>
-                                <state key="normal" title="\"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="msV-RQ-jSK">
+                                <rect key="frame" x="291" y="50" width="19" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4HH-yT-xqH">
+                                <rect key="frame" x="180" y="219" width="30" height="30"/>
+                                <state key="normal" title="6"/>
+                                <connections>
+                                    <action selector="sixButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ud8-qy-4ov"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -115,6 +157,7 @@
                             <constraint firstItem="0IO-tY-Bh9" firstAttribute="leading" secondItem="jNq-io-wnj" secondAttribute="trailing" constant="25" id="Kgs-81-w8D"/>
                             <constraint firstItem="uAW-i6-s2h" firstAttribute="top" secondItem="4HH-yT-xqH" secondAttribute="bottom" constant="25" id="NTq-nD-5dQ"/>
                             <constraint firstItem="MHh-tJ-5Io" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="Nr9-uC-FvM"/>
+                            <constraint firstItem="msV-RQ-jSK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="50" id="Nyk-I7-UWu"/>
                             <constraint firstItem="jNq-io-wnj" firstAttribute="leading" secondItem="vpx-aC-A8Z" secondAttribute="trailing" constant="25" id="PUY-p8-lrT"/>
                             <constraint firstItem="cz4-JB-Soh" firstAttribute="leading" secondItem="njL-hG-DAG" secondAttribute="trailing" constant="25" id="Q5K-iz-XLF"/>
                             <constraint firstItem="vfK-Ht-6ZG" firstAttribute="leading" secondItem="MOd-rZ-Zvf" secondAttribute="trailing" constant="25" id="RVV-8A-8RF"/>
@@ -123,6 +166,7 @@
                             <constraint firstItem="hoI-xn-5jP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="WvD-85-obg"/>
                             <constraint firstItem="F0Y-pZ-gT3" firstAttribute="leading" secondItem="3Jb-Oo-90d" secondAttribute="trailing" constant="25" id="Ybv-ZV-pgw"/>
                             <constraint firstItem="0IO-tY-Bh9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="89" id="ZYl-c2-dCt"/>
+                            <constraint firstItem="msV-RQ-jSK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zkx-4w-o8l"/>
                             <constraint firstItem="sAt-1j-UUj" firstAttribute="leading" secondItem="vfK-Ht-6ZG" secondAttribute="trailing" constant="25" id="a1x-0p-1Qo"/>
                             <constraint firstItem="OXb-zA-Iyi" firstAttribute="leading" secondItem="4HH-yT-xqH" secondAttribute="trailing" constant="25" id="aej-aL-h1M"/>
                             <constraint firstItem="qe6-T6-ZV1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="89" id="bC4-Fs-r8d"/>
@@ -145,6 +189,29 @@
                             <constraint firstItem="njL-hG-DAG" firstAttribute="leading" secondItem="F0Y-pZ-gT3" secondAttribute="trailing" constant="25" id="yy5-wa-az9"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ACButton" destination="vpx-aC-A8Z" id="3Fh-xt-Yrx"/>
+                        <outlet property="PercentButton" destination="0IO-tY-Bh9" id="oz4-YM-e4W"/>
+                        <outlet property="additionButton" destination="OXb-zA-Iyi" id="jQz-2h-3co"/>
+                        <outlet property="bracketsButton" destination="F0Y-pZ-gT3" id="fXb-Ed-HRX"/>
+                        <outlet property="decimalButton" destination="njL-hG-DAG" id="HXY-dR-HqC"/>
+                        <outlet property="displayLabel" destination="msV-RQ-jSK" id="xV8-wg-R7Y"/>
+                        <outlet property="divideButton" destination="qe6-T6-ZV1" id="aDi-0W-N8L"/>
+                        <outlet property="eightButton" destination="vfK-Ht-6ZG" id="YTi-aN-IEl"/>
+                        <outlet property="equalsButton" destination="cz4-JB-Soh" id="SgX-0P-YMf"/>
+                        <outlet property="fiveButton" destination="n3l-gU-Ij3" id="P69-Ps-v7w"/>
+                        <outlet property="fourButton" destination="MHh-tJ-5Io" id="Cx2-4k-ZdR"/>
+                        <outlet property="minusButton" destination="e4m-yK-hXc" id="pdn-14-Px6"/>
+                        <outlet property="multiplyButton" destination="xD0-nc-yAf" id="DTk-vO-heU"/>
+                        <outlet property="nineButton" destination="sAt-1j-UUj" id="fbu-wb-0ie"/>
+                        <outlet property="oneButton" destination="hoI-xn-5jP" id="Yft-JX-VlM"/>
+                        <outlet property="plusMinusButton" destination="jNq-io-wnj" id="qTa-hy-Dsf"/>
+                        <outlet property="sevenButton" destination="MOd-rZ-Zvf" id="j8B-GC-tbm"/>
+                        <outlet property="sixButton" destination="4HH-yT-xqH" id="PYB-Em-goL"/>
+                        <outlet property="threeButton" destination="uAW-i6-s2h" id="DWF-13-bjt"/>
+                        <outlet property="twoButton" destination="aSa-DF-tB3" id="Bw6-0L-FFR"/>
+                        <outlet property="zeroButton" destination="3Jb-Oo-90d" id="aF6-kA-Djw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
