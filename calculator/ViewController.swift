@@ -41,31 +41,81 @@ class ViewController: UIViewController {
     var prevNum: Int = 0
     var newNum: Int = 0
     var total: Int = 0
+    var buttonsClicked: Int = 0;
     
     @IBAction func plusButtonPressed (sender: AnyObject) {
-        displayString += "+"
-        displayLabel.text = displayString
-        lastButtonPushed = "+"
-    }
-    
-    @IBAction func minusButtonPressed (sender: AnyObject) {
+        if (lastButtonPushed == "+" || lastButtonPushed == "-" || lastButtonPushed == "*" || lastButtonPushed == "/" || buttonsClicked == 0) {
+            displayLabel.text = displayLabel.text
+        }
+        else {
+            displayString += "+"
+            displayLabel.text = displayString
+            lastButtonPushed = "+"
+            buttonsClicked++
+        }
         
     }
     
+    @IBAction func minusButtonPressed (sender: AnyObject) {
+        if (lastButtonPushed == "+" || lastButtonPushed == "-" || lastButtonPushed == "*" || lastButtonPushed == "/" || buttonsClicked == 0) {
+            displayLabel.text = displayLabel.text
+        } else {
+            displayString += "-"
+            displayLabel.text = displayString
+            lastButtonPushed = "-"
+            buttonsClicked++
+        }
+    }
+    
     @IBAction func multiplyButtonPressed(sender: AnyObject) {
+        if (lastButtonPushed == "+" || lastButtonPushed == "-" || lastButtonPushed == "*" || lastButtonPushed == "/" || buttonsClicked == 0) {
+            displayLabel.text = displayLabel.text
+        } else {
+            displayString += "*"
+            displayLabel.text = displayString
+            lastButtonPushed = "*"
+            buttonsClicked++
+        }
     }
     
     @IBAction func divisionButtonPressed(sender: AnyObject) {
+        if (lastButtonPushed == "+" || lastButtonPushed == "-" || lastButtonPushed == "*" || lastButtonPushed == "/" || buttonsClicked == 0) {
+            displayLabel.text = displayLabel.text
+        } else {
+            displayString += "/"
+            displayLabel.text = displayString
+            lastButtonPushed = "/"
+            buttonsClicked++
+        }
     }
     
     @IBAction func equalButtonPressed(sender: AnyObject) {
     }
     
+    @IBAction func percentButtonPressed(sender: AnyObject) {
+    }
+    
+    @IBAction func plusMinusButtonPressed(sender: AnyObject) {
+    }
+    
+    @IBAction func ACButtonPressed(sender: AnyObject) {
+    }
+    
+    @IBAction func BracketButtonPressed(sender: AnyObject) {
+    }
+    
+    @IBAction func decimalButtonPressed(sender: AnyObject) {
+        displayString += "."
+        displayLabel.text = displayString
+        lastButtonPushed = "."
+        buttonsClicked++
+    }
     
     @IBAction func zeroButtonPressed (sender: AnyObject) {
         displayString += String(0)
         displayLabel.text = displayString
         lastButtonPushed = "0"
+        buttonsClicked++
         //prevNum = Int(displayString)!
         //total = prevNum + newNum
     }
@@ -79,28 +129,65 @@ class ViewController: UIViewController {
         displayString += String(1)
         displayLabel.text = displayString
         lastButtonPushed = "1"
-        print(displayString)
-        print(prevNum)
-        print(newNum)
+        buttonsClicked++
     }
     
     
     @IBAction func twoButtonPressed(sender: AnyObject) {
+        displayString += "2"
+        displayLabel.text = displayString
+        lastButtonPushed = "2"
+        buttonsClicked++
     }
     
     @IBAction func threeButtonPressed(sender: AnyObject) {
+        displayString += "3"
+        displayLabel.text = displayString
+        lastButtonPushed = "3"
+        buttonsClicked++
     }
     
     @IBAction func fourButtonPressed(sender: AnyObject) {
+        displayString += "4"
+        displayLabel.text = displayString
+        lastButtonPushed = "4"
+        buttonsClicked++
     }
     
     @IBAction func fiveButtonPressed(sender: AnyObject) {
+        displayString += "5"
+        displayLabel.text = displayString
+        lastButtonPushed = "5"
+        buttonsClicked++
     }
     
     @IBAction func sixButtonPressed(sender: AnyObject) {
+        displayString += "6"
+        displayLabel.text = displayString
+        lastButtonPushed = "6"
+        buttonsClicked++
     }
     
+    @IBAction func sevenButtonPressed(sender: AnyObject) {
+        displayString += "7"
+        displayLabel.text = displayString
+        lastButtonPushed = "7"
+        buttonsClicked++
+    }
     
+    @IBAction func eightButtonPressed(sender: AnyObject) {
+        displayString += "8"
+        displayLabel.text = displayString
+        lastButtonPushed = "8"
+        buttonsClicked++
+    }
+    
+    @IBAction func nineButtonPressed(sender: AnyObject) {
+        displayString += "9"
+        displayLabel.text = displayString
+        lastButtonPushed = "9"
+        buttonsClicked++
+    }
     
     
     override func viewDidLoad() {
