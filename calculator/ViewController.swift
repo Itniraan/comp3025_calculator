@@ -40,37 +40,34 @@ class ViewController: UIViewController {
     var currentNumber: String = ""
     var lastButtonPushed: String = ""
     var lastOperator: String = ""
-    var prevNum: Int = 0
-    var newNum: Int = 0
-    var total: Int = 0
+    var prevNum: Double = 0
+    var newNum: Double = 0
+    var total: Double = 0
     var buttonsClicked: Int = 0;
     
     func checkCalc () {
         if lastOperator == "" {
-            prevNum = Int (currentNumber)!
+            prevNum = Double (currentNumber)!
             currentNumber = ""
         }
         else if lastOperator != "" {
             if lastOperator == "+" {
-                total = prevNum + Int (currentNumber)!
+                total = prevNum + Double (currentNumber)!
                 displayString = String (total)
                 prevNum = total
                 currentNumber = ""
-                print(total)
-                print(currentNumber)
-                print(prevNum)
             } else if lastOperator == "-" {
-                total = prevNum - Int (currentNumber)!
+                total = prevNum - Double (currentNumber)!
                 displayString = String (total)
                 prevNum = total
                 currentNumber = ""
             } else if lastOperator == "*" {
-                total = prevNum * Int (currentNumber)!
+                total = prevNum * Double (currentNumber)!
                 displayString = String (total)
                 prevNum = total
                 currentNumber = ""
             } else if lastOperator == "/" {
-                total = prevNum / Int (currentNumber)!
+                total = prevNum / Double (currentNumber)!
                 displayString = String (total)
                 prevNum = total
                 currentNumber = ""
@@ -133,6 +130,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func equalButtonPressed(sender: AnyObject) {
+        
     }
     
     @IBAction func percentButtonPressed(sender: AnyObject) {
@@ -142,13 +140,25 @@ class ViewController: UIViewController {
     }
     
     @IBAction func ACButtonPressed(sender: AnyObject) {
+        lastOperator = ""
+        currentNumber = ""
+        prevNum = 0
+        total = 0
+        displayString = ""
+        displayLabel.text = "0"
     }
     
     @IBAction func BracketButtonPressed(sender: AnyObject) {
     }
     
     @IBAction func decimalButtonPressed(sender: AnyObject) {
-        displayString += "."
+        if currentNumber == "" {
+            currentNumber += "0."
+            displayString += "0."
+        } else {
+            currentNumber += "."
+            displayString += "."
+        }
         displayLabel.text = displayString
         lastButtonPushed = "."
         buttonsClicked++
