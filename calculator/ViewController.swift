@@ -155,7 +155,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func zeroButtonPressed (sender: AnyObject) {
-        displayString += String(0)
+        currentNumber += "0"
+        displayString += "0"
         displayLabel.text = displayString
         lastButtonPushed = "0"
         buttonsClicked++
@@ -205,6 +206,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func sixButtonPressed(sender: AnyObject) {
+        currentNumber += "6"
         displayString += "6"
         displayLabel.text = displayString
         lastButtonPushed = "6"
@@ -212,6 +214,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func sevenButtonPressed(sender: AnyObject) {
+        currentNumber += "7"
         displayString += "7"
         displayLabel.text = displayString
         lastButtonPushed = "7"
@@ -219,6 +222,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func eightButtonPressed(sender: AnyObject) {
+        currentNumber += "8"
         displayString += "8"
         displayLabel.text = displayString
         lastButtonPushed = "8"
@@ -226,6 +230,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func nineButtonPressed(sender: AnyObject) {
+        currentNumber += "9"
         displayString += "9"
         displayLabel.text = displayString
         lastButtonPushed = "9"
