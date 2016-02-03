@@ -124,11 +124,11 @@
                                     <action selector="minusButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="chK-R1-vMp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cz4-JB-Soh">
-                                <rect key="frame" x="235" y="329" width="30" height="30"/>
-                                <state key="normal" title="="/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="njL-hG-DAG">
+                                <rect key="frame" x="180" y="329" width="30" height="30"/>
+                                <state key="normal" title="."/>
                                 <connections>
-                                    <action selector="equalButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ijX-wI-FWN"/>
+                                    <action selector="decimalButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SEN-M8-Hmj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F0Y-pZ-gT3">
@@ -158,11 +158,11 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="njL-hG-DAG">
-                                <rect key="frame" x="180" y="329" width="30" height="30"/>
-                                <state key="normal" title="."/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cz4-JB-Soh">
+                                <rect key="frame" x="235" y="329" width="30" height="30"/>
+                                <state key="normal" title="="/>
                                 <connections>
-                                    <action selector="decimalButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SEN-M8-Hmj"/>
+                                    <action selector="equalButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ijX-wI-FWN"/>
                                 </connections>
                             </button>
                         </subviews>

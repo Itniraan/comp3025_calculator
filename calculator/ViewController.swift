@@ -37,17 +37,54 @@ class ViewController: UIViewController {
     @IBOutlet weak var equalsButton: UIButton!
     
     var displayString: String = ""
+    var currentNumber: String = ""
     var lastButtonPushed: String = ""
+    var lastOperator: String = ""
     var prevNum: Int = 0
     var newNum: Int = 0
     var total: Int = 0
     var buttonsClicked: Int = 0;
+    
+    func checkCalc () {
+        if lastOperator == "" {
+            prevNum = Int (currentNumber)!
+            currentNumber = ""
+        }
+        else if lastOperator != "" {
+            if lastOperator == "+" {
+                total = prevNum + Int (currentNumber)!
+                displayString = String (total)
+                prevNum = total
+                currentNumber = ""
+                print(total)
+                print(currentNumber)
+                print(prevNum)
+            } else if lastOperator == "-" {
+                total = prevNum - Int (currentNumber)!
+                displayString = String (total)
+                prevNum = total
+                currentNumber = ""
+            } else if lastOperator == "*" {
+                total = prevNum * Int (currentNumber)!
+                displayString = String (total)
+                prevNum = total
+                currentNumber = ""
+            } else if lastOperator == "/" {
+                total = prevNum / Int (currentNumber)!
+                displayString = String (total)
+                prevNum = total
+                currentNumber = ""
+            }
+        }
+    }
     
     @IBAction func plusButtonPressed (sender: AnyObject) {
         if (lastButtonPushed == "+" || lastButtonPushed == "-" || lastButtonPushed == "*" || lastButtonPushed == "/" || buttonsClicked == 0) {
             displayLabel.text = displayLabel.text
         }
         else {
+            checkCalc()
+            lastOperator = "+"
             displayString += "+"
             displayLabel.text = displayString
             lastButtonPushed = "+"
@@ -60,6 +97,8 @@ class ViewController: UIViewController {
         if (lastButtonPushed == "+" || lastButtonPushed == "-" || lastButtonPushed == "*" || lastButtonPushed == "/" || buttonsClicked == 0) {
             displayLabel.text = displayLabel.text
         } else {
+            checkCalc()
+            lastOperator = "-"
             displayString += "-"
             displayLabel.text = displayString
             lastButtonPushed = "-"
@@ -71,6 +110,8 @@ class ViewController: UIViewController {
         if (lastButtonPushed == "+" || lastButtonPushed == "-" || lastButtonPushed == "*" || lastButtonPushed == "/" || buttonsClicked == 0) {
             displayLabel.text = displayLabel.text
         } else {
+            checkCalc()
+            lastOperator = "*"
             displayString += "*"
             displayLabel.text = displayString
             lastButtonPushed = "*"
@@ -82,6 +123,8 @@ class ViewController: UIViewController {
         if (lastButtonPushed == "+" || lastButtonPushed == "-" || lastButtonPushed == "*" || lastButtonPushed == "/" || buttonsClicked == 0) {
             displayLabel.text = displayLabel.text
         } else {
+            checkCalc()
+            lastOperator = "/"
             displayString += "/"
             displayLabel.text = displayString
             lastButtonPushed = "/"
@@ -121,12 +164,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func oneButtonPressed (sender: AnyObject) {
-        //if lastButtonPushed == "+" || lastButtonPushed == "-" || lastButtonPushed == "*" || lastButtonPushed == "/"  {
-        //    prevNum = Int(displayString)!
-        //    newNum = 1
-        //    total = prevNum + newNum
-        //}
-        displayString += String(1)
+        currentNumber += "1"
+        displayString += "1"
         displayLabel.text = displayString
         lastButtonPushed = "1"
         buttonsClicked++
@@ -134,6 +173,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func twoButtonPressed(sender: AnyObject) {
+        currentNumber += "2"
         displayString += "2"
         displayLabel.text = displayString
         lastButtonPushed = "2"
@@ -141,6 +181,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func threeButtonPressed(sender: AnyObject) {
+        currentNumber += "3"
         displayString += "3"
         displayLabel.text = displayString
         lastButtonPushed = "3"
@@ -148,6 +189,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func fourButtonPressed(sender: AnyObject) {
+        currentNumber += "4"
         displayString += "4"
         displayLabel.text = displayString
         lastButtonPushed = "4"
@@ -155,6 +197,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func fiveButtonPressed(sender: AnyObject) {
+        currentNumber += "5"
         displayString += "5"
         displayLabel.text = displayString
         lastButtonPushed = "5"
