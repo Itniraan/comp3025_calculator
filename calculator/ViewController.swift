@@ -130,6 +130,17 @@ class ViewController: UIViewController {
     }
     
     @IBAction func equalButtonPressed(sender: AnyObject) {
+        if currentNumber == "" {
+            displayLabel.text = displayLabel.text
+        } else if lastOperator == "" {
+            total = Double (displayString)!
+            displayLabel.text = displayString
+        } else {
+            checkCalc()
+            lastOperator = ""
+            displayString = String(total)
+            displayLabel.text = displayString
+        }
         
     }
     
