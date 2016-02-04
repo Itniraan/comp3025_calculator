@@ -1,7 +1,10 @@
 //
 //  ViewController.swift
 //  Calculator Assignment 1
+//  File Name: ViewController.swift
 //  Author: Blake Murdock (200260568)
+//  Date: Friday, February 05, 2016
+//  Decription: A basic calculator app for iOS
 //
 //  Created by student on 2016-02-02.
 //  Copyright © 2016 Blake. All rights reserved.
@@ -14,25 +17,6 @@ class ViewController: UIViewController {
     // Display Variable
     @IBOutlet weak var displayLabel: UILabel!
     
-    // Button Variables
-    @IBOutlet weak var ACButton: UIButton!
-    @IBOutlet weak var divideButton: UIButton!
-    @IBOutlet weak var sevenButton: UIButton!
-    @IBOutlet weak var eightButton: UIButton!
-    @IBOutlet weak var nineButton: UIButton!
-    @IBOutlet weak var multiplyButton: UIButton!
-    @IBOutlet weak var fourButton: UIButton!
-    @IBOutlet weak var fiveButton: UIButton!
-    @IBOutlet weak var sixButton: UIButton!
-    @IBOutlet weak var additionButton: UIButton!
-    @IBOutlet weak var oneButton: UIButton!
-    @IBOutlet weak var twoButton: UIButton!
-    @IBOutlet weak var threeButton: UIButton!
-    @IBOutlet weak var minusButton: UIButton!
-    @IBOutlet weak var zeroButton: UIButton!
-    @IBOutlet weak var decimalButton: UIButton!
-    @IBOutlet weak var equalsButton: UIButton!
-    
     var displayString: String = ""
     var currentNumber: String = ""
     var lastButtonPushed: String = ""
@@ -42,6 +26,9 @@ class ViewController: UIViewController {
     var total: Double = 0
     var buttonsClicked: Int = 0
     
+    /**
+     Function to check if a calculation needs to be made. Covers addition, subtraction, multiplication, division, and exponents
+    */
     func checkCalc () {
         if lastOperator == "" {
             prevNum = Double (currentNumber)!
@@ -77,6 +64,9 @@ class ViewController: UIViewController {
         }
     }
     
+    /**
+     Function that is trigger when the addition button is pressed
+     */
     @IBAction func plusButtonPressed (sender: AnyObject) {
         if lastButtonPushed == "+" || lastButtonPushed == "-" || lastButtonPushed == "*" || lastButtonPushed == "/" || lastButtonPushed == "^" || buttonsClicked == 0 {
             displayLabel.text = displayLabel.text
@@ -92,6 +82,9 @@ class ViewController: UIViewController {
         
     }
     
+    /**
+     Function that is trigger when the subtraction button is pressed
+     */
     @IBAction func minusButtonPressed (sender: AnyObject) {
         if lastButtonPushed == "+" || lastButtonPushed == "-" || lastButtonPushed == "*" || lastButtonPushed == "/" || lastButtonPushed == "^" || buttonsClicked == 0 {
             displayLabel.text = displayLabel.text
@@ -105,6 +98,9 @@ class ViewController: UIViewController {
         }
     }
     
+    /**
+     Function that is trigger when the multiplication button is pressed
+     */
     @IBAction func multiplyButtonPressed(sender: AnyObject) {
         if lastButtonPushed == "+" || lastButtonPushed == "-" || lastButtonPushed == "*" || lastButtonPushed == "/" || lastButtonPushed == "^" || buttonsClicked == 0 {
             displayLabel.text = displayLabel.text
@@ -118,6 +114,9 @@ class ViewController: UIViewController {
         }
     }
     
+    /**
+     Function that is trigger when the division button is pressed
+     */
     @IBAction func divisionButtonPressed(sender: AnyObject) {
         if lastButtonPushed == "+" || lastButtonPushed == "-" || lastButtonPushed == "*" || lastButtonPushed == "/" || lastButtonPushed == "^" || buttonsClicked == 0 {
             displayLabel.text = displayLabel.text
@@ -131,6 +130,9 @@ class ViewController: UIViewController {
         }
     }
     
+    /**
+     Function that is trigger when the equal button is pressed
+     */
     @IBAction func equalButtonPressed(sender: AnyObject) {
         if currentNumber == "" || lastButtonPushed == "+" || lastButtonPushed == "-" || lastButtonPushed == "*" || lastButtonPushed == "/" || lastButtonPushed == "^" || buttonsClicked == 0 {
             print(2+(-2))
@@ -147,7 +149,9 @@ class ViewController: UIViewController {
         
     }
     
-    
+    /**
+     Function that is trigger when the AC button is pressed
+     */
     @IBAction func ACButtonPressed(sender: AnyObject) {
         lastOperator = ""
         currentNumber = ""
@@ -157,6 +161,9 @@ class ViewController: UIViewController {
         displayLabel.text = "0"
     }
     
+    /**
+     Function that is trigger when the exponent button is pressed
+     */
     @IBAction func powerOfButtonPressed(sender: AnyObject) {
         if lastButtonPushed == "+" || lastButtonPushed == "-" || lastButtonPushed == "*" || lastButtonPushed == "/" || lastButtonPushed == "^" || buttonsClicked == 0 {
             
@@ -170,6 +177,9 @@ class ViewController: UIViewController {
         }
     }
     
+    /**
+     Function that is trigger when the decimal button is pressed
+     */
     @IBAction func decimalButtonPressed(sender: AnyObject) {
         if currentNumber == "" {
             currentNumber += "0."
@@ -183,6 +193,9 @@ class ViewController: UIViewController {
         buttonsClicked++
     }
     
+    /**
+     Function that is trigger when the zero button is pressed
+     */
     @IBAction func zeroButtonPressed (sender: AnyObject) {
         currentNumber += "0"
         displayString += "0"
@@ -191,6 +204,9 @@ class ViewController: UIViewController {
         buttonsClicked++
     }
     
+    /**
+     Function that is trigger when the one button is pressed
+     */
     @IBAction func oneButtonPressed (sender: AnyObject) {
         currentNumber += "1"
         displayString += "1"
@@ -199,7 +215,9 @@ class ViewController: UIViewController {
         buttonsClicked++
     }
     
-    
+    /**
+     Function that is trigger when the two button is pressed
+     */
     @IBAction func twoButtonPressed(sender: AnyObject) {
         currentNumber += "2"
         displayString += "2"
@@ -208,6 +226,9 @@ class ViewController: UIViewController {
         buttonsClicked++
     }
     
+    /**
+     Function that is trigger when the three button is pressed
+     */
     @IBAction func threeButtonPressed(sender: AnyObject) {
         currentNumber += "3"
         displayString += "3"
@@ -216,6 +237,9 @@ class ViewController: UIViewController {
         buttonsClicked++
     }
     
+    /**
+     Function that is trigger when the four button is pressed
+     */
     @IBAction func fourButtonPressed(sender: AnyObject) {
         currentNumber += "4"
         displayString += "4"
@@ -224,6 +248,9 @@ class ViewController: UIViewController {
         buttonsClicked++
     }
     
+    /**
+     Function that is trigger when the five button is pressed
+     */
     @IBAction func fiveButtonPressed(sender: AnyObject) {
         currentNumber += "5"
         displayString += "5"
@@ -232,6 +259,9 @@ class ViewController: UIViewController {
         buttonsClicked++
     }
     
+    /**
+     Function that is trigger when the six button is pressed
+     */
     @IBAction func sixButtonPressed(sender: AnyObject) {
         currentNumber += "6"
         displayString += "6"
@@ -240,6 +270,9 @@ class ViewController: UIViewController {
         buttonsClicked++
     }
     
+    /**
+     Function that is trigger when the seven button is pressed
+     */
     @IBAction func sevenButtonPressed(sender: AnyObject) {
         currentNumber += "7"
         displayString += "7"
@@ -248,6 +281,9 @@ class ViewController: UIViewController {
         buttonsClicked++
     }
     
+    /**
+     Function that is trigger when the eight button is pressed
+     */
     @IBAction func eightButtonPressed(sender: AnyObject) {
         currentNumber += "8"
         displayString += "8"
@@ -256,6 +292,9 @@ class ViewController: UIViewController {
         buttonsClicked++
     }
     
+    /**
+     Function that is trigger when the nine button is pressed
+     */
     @IBAction func nineButtonPressed(sender: AnyObject) {
         currentNumber += "9"
         displayString += "9"

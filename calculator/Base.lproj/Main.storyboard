@@ -87,13 +87,6 @@
                                     <action selector="decimalButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SEN-M8-Hmj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Jb-Oo-90d">
-                                <rect key="frame" x="210" y="410" width="30" height="30"/>
-                                <state key="normal" title="0"/>
-                                <connections>
-                                    <action selector="zeroButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yex-q7-j1N"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F0Y-pZ-gT3">
                                 <rect key="frame" x="265" y="410" width="30" height="30"/>
                                 <state key="normal" title="^"/>
@@ -149,6 +142,13 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Jb-Oo-90d">
+                                <rect key="frame" x="210" y="410" width="30" height="30"/>
+                                <state key="normal" title="0"/>
+                                <connections>
+                                    <action selector="zeroButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yex-q7-j1N"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -193,24 +193,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="ACButton" destination="vpx-aC-A8Z" id="3Fh-xt-Yrx"/>
-                        <outlet property="additionButton" destination="OXb-zA-Iyi" id="jQz-2h-3co"/>
-                        <outlet property="decimalButton" destination="njL-hG-DAG" id="HXY-dR-HqC"/>
                         <outlet property="displayLabel" destination="msV-RQ-jSK" id="xV8-wg-R7Y"/>
-                        <outlet property="divideButton" destination="qe6-T6-ZV1" id="aDi-0W-N8L"/>
-                        <outlet property="eightButton" destination="vfK-Ht-6ZG" id="YTi-aN-IEl"/>
-                        <outlet property="equalsButton" destination="cz4-JB-Soh" id="SgX-0P-YMf"/>
-                        <outlet property="fiveButton" destination="n3l-gU-Ij3" id="P69-Ps-v7w"/>
-                        <outlet property="fourButton" destination="MHh-tJ-5Io" id="Cx2-4k-ZdR"/>
-                        <outlet property="minusButton" destination="e4m-yK-hXc" id="pdn-14-Px6"/>
-                        <outlet property="multiplyButton" destination="xD0-nc-yAf" id="DTk-vO-heU"/>
-                        <outlet property="nineButton" destination="sAt-1j-UUj" id="fbu-wb-0ie"/>
-                        <outlet property="oneButton" destination="hoI-xn-5jP" id="Yft-JX-VlM"/>
-                        <outlet property="sevenButton" destination="MOd-rZ-Zvf" id="j8B-GC-tbm"/>
-                        <outlet property="sixButton" destination="4HH-yT-xqH" id="PYB-Em-goL"/>
-                        <outlet property="threeButton" destination="uAW-i6-s2h" id="DWF-13-bjt"/>
-                        <outlet property="twoButton" destination="aSa-DF-tB3" id="Bw6-0L-FFR"/>
-                        <outlet property="zeroButton" destination="3Jb-Oo-90d" id="aF6-kA-Djw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
