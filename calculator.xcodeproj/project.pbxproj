@@ -284,6 +284,7 @@
 				3F996A1F1C6147A40083DF15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
