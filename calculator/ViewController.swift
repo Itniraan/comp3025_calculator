@@ -32,7 +32,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var threeButton: UIButton!
     @IBOutlet weak var minusButton: UIButton!
     @IBOutlet weak var zeroButton: UIButton!
-    @IBOutlet weak var bracketsButton: UIButton!
     @IBOutlet weak var decimalButton: UIButton!
     @IBOutlet weak var equalsButton: UIButton!
     
@@ -43,10 +42,14 @@ class ViewController: UIViewController {
     var prevNum: Double = 0
     var newNum: Double = 0
     var total: Double = 0
-    var buttonsClicked: Int = 0;
+    var buttonsClicked: Int = 0
+    var negative: Bool = false
     
     func checkCalc () {
         if lastOperator == "" {
+            if negative == true {
+                currentNumber = currentNumber + ")"
+            }
             prevNum = Double (currentNumber)!
             currentNumber = ""
         }
@@ -71,12 +74,17 @@ class ViewController: UIViewController {
                 displayString = String (total)
                 prevNum = total
                 currentNumber = ""
+            } else if lastOperator == "^" {
+                total = pow(prevNum, Double (currentNumber)!)
+                displayString = String (total)
+                prevNum = total
+                currentNumber = ""
             }
         }
     }
     
     @IBAction func plusButtonPressed (sender: AnyObject) {
-        if (lastButtonPushed == "+" || lastButtonPushed == "-" || lastButtonPushed == "*" || lastButtonPushed == "/" || buttonsClicked == 0) {
+        if lastButtonPushed == "+" || lastButtonPushed == "-" || lastButtonPushed == "*" || lastButtonPushed == "/" || lastButtonPushed == "^" || buttonsClicked == 0 {
             displayLabel.text = displayLabel.text
         }
         else {
@@ -91,7 +99,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func minusButtonPressed (sender: AnyObject) {
-        if (lastButtonPushed == "+" || lastButtonPushed == "-" || lastButtonPushed == "*" || lastButtonPushed == "/" || buttonsClicked == 0) {
+        if lastButtonPushed == "+" || lastButtonPushed == "-" || lastButtonPushed == "*" || lastButtonPushed == "/" || lastButtonPushed == "^" || buttonsClicked == 0 {
             displayLabel.text = displayLabel.text
         } else {
             checkCalc()
@@ -104,7 +112,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func multiplyButtonPressed(sender: AnyObject) {
-        if (lastButtonPushed == "+" || lastButtonPushed == "-" || lastButtonPushed == "*" || lastButtonPushed == "/" || buttonsClicked == 0) {
+        if lastButtonPushed == "+" || lastButtonPushed == "-" || lastButtonPushed == "*" || lastButtonPushed == "/" || lastButtonPushed == "^" || buttonsClicked == 0 {
             displayLabel.text = displayLabel.text
         } else {
             checkCalc()
@@ -117,7 +125,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func divisionButtonPressed(sender: AnyObject) {
-        if (lastButtonPushed == "+" || lastButtonPushed == "-" || lastButtonPushed == "*" || lastButtonPushed == "/" || buttonsClicked == 0) {
+        if lastButtonPushed == "+" || lastButtonPushed == "-" || lastButtonPushed == "*" || lastButtonPushed == "/" || lastButtonPushed == "^" || buttonsClicked == 0 {
             displayLabel.text = displayLabel.text
         } else {
             checkCalc()
@@ -130,7 +138,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func equalButtonPressed(sender: AnyObject) {
-        if currentNumber == "" {
+        if currentNumber == "" || lastButtonPushed == "+" || lastButtonPushed == "-" || lastButtonPushed == "*" || lastButtonPushed == "/" || lastButtonPushed == "^" || buttonsClicked == 0 {
+            print(2+(-2))
             displayLabel.text = displayLabel.text
         } else if lastOperator == "" {
             total = Double (displayString)!
@@ -145,9 +154,18 @@ class ViewController: UIViewController {
     }
     
     @IBAction func percentButtonPressed(sender: AnyObject) {
+        
     }
     
     @IBAction func plusMinusButtonPressed(sender: AnyObject) {
+        if negative == false {
+            currentNumber = "(-" + currentNumber
+            displayString = currentNumber
+            displayLabel.text = displayString
+            negative = true
+        } else {
+            
+        }
     }
     
     @IBAction func ACButtonPressed(sender: AnyObject) {
@@ -159,7 +177,17 @@ class ViewController: UIViewController {
         displayLabel.text = "0"
     }
     
-    @IBAction func BracketButtonPressed(sender: AnyObject) {
+    @IBAction func powerOfButtonPressed(sender: AnyObject) {
+        if lastButtonPushed == "+" || lastButtonPushed == "-" || lastButtonPushed == "*" || lastButtonPushed == "/" || lastButtonPushed == "^" || buttonsClicked == 0 {
+            
+        } else {
+            checkCalc()
+            lastOperator = "^"
+            displayString += "^"
+            displayLabel.text = displayString
+            lastButtonPushed = "^"
+            buttonsClicked++
+        }
     }
     
     @IBAction func decimalButtonPressed(sender: AnyObject) {
@@ -181,8 +209,6 @@ class ViewController: UIViewController {
         displayLabel.text = displayString
         lastButtonPushed = "0"
         buttonsClicked++
-        //prevNum = Int(displayString)!
-        //total = prevNum + newNum
     }
     
     @IBAction func oneButtonPressed (sender: AnyObject) {

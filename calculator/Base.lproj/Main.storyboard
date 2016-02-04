@@ -130,13 +130,6 @@
                                     <action selector="decimalButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SEN-M8-Hmj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F0Y-pZ-gT3">
-                                <rect key="frame" x="125" y="329" width="30" height="30"/>
-                                <state key="normal" title="()"/>
-                                <connections>
-                                    <action selector="BracketButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jvR-nB-oiC"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Jb-Oo-90d">
                                 <rect key="frame" x="70" y="329" width="30" height="30"/>
                                 <state key="normal" title="0"/>
@@ -162,6 +155,13 @@
                                 <state key="normal" title="="/>
                                 <connections>
                                     <action selector="equalButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ijX-wI-FWN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F0Y-pZ-gT3">
+                                <rect key="frame" x="125" y="329" width="30" height="30"/>
+                                <state key="normal" title="^"/>
+                                <connections>
+                                    <action selector="powerOfButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iWS-Oz-mg0"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -217,7 +217,6 @@
                         <outlet property="ACButton" destination="vpx-aC-A8Z" id="3Fh-xt-Yrx"/>
                         <outlet property="PercentButton" destination="0IO-tY-Bh9" id="oz4-YM-e4W"/>
                         <outlet property="additionButton" destination="OXb-zA-Iyi" id="jQz-2h-3co"/>
-                        <outlet property="bracketsButton" destination="F0Y-pZ-gT3" id="fXb-Ed-HRX"/>
                         <outlet property="decimalButton" destination="njL-hG-DAG" id="HXY-dR-HqC"/>
                         <outlet property="displayLabel" destination="msV-RQ-jSK" id="xV8-wg-R7Y"/>
                         <outlet property="divideButton" destination="qe6-T6-ZV1" id="aDi-0W-N8L"/>
