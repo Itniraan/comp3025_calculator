@@ -16,8 +16,6 @@ class ViewController: UIViewController {
     
     // Button Variables
     @IBOutlet weak var ACButton: UIButton!
-    @IBOutlet weak var plusMinusButton: UIButton!
-    @IBOutlet weak var PercentButton: UIButton!
     @IBOutlet weak var divideButton: UIButton!
     @IBOutlet weak var sevenButton: UIButton!
     @IBOutlet weak var eightButton: UIButton!
@@ -43,13 +41,9 @@ class ViewController: UIViewController {
     var newNum: Double = 0
     var total: Double = 0
     var buttonsClicked: Int = 0
-    var negative: Bool = false
     
     func checkCalc () {
         if lastOperator == "" {
-            if negative == true {
-                currentNumber = currentNumber + ")"
-            }
             prevNum = Double (currentNumber)!
             currentNumber = ""
         }
@@ -153,20 +147,6 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func percentButtonPressed(sender: AnyObject) {
-        
-    }
-    
-    @IBAction func plusMinusButtonPressed(sender: AnyObject) {
-        if negative == false {
-            currentNumber = "(-" + currentNumber
-            displayString = currentNumber
-            displayLabel.text = displayString
-            negative = true
-        } else {
-            
-        }
-    }
     
     @IBAction func ACButtonPressed(sender: AnyObject) {
         lastOperator = ""
