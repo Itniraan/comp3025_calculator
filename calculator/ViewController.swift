@@ -32,7 +32,7 @@ class ViewController: UIViewController {
     func checkCalc () {
         if lastOperator == "" {
             print(total)
-            prevNum = float_t (currentNumber)!
+            prevNum = float_t (currentNumber)! // Needed to use float_t here to allow for negative numbers
             currentNumber = ""
         }
         else if lastOperator != "" {
