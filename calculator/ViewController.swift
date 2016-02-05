@@ -21,9 +21,9 @@ class ViewController: UIViewController {
     var currentNumber: String = ""
     var lastButtonPushed: String = ""
     var lastOperator: String = ""
-    var prevNum: Double = 0
-    var newNum: Double = 0
-    var total: Double = 0
+    var prevNum: Float = 0
+    var newNum: Float = 0
+    var total: Float = 0
     var buttonsClicked: Int = 0
     
     /**
@@ -31,32 +31,33 @@ class ViewController: UIViewController {
     */
     func checkCalc () {
         if lastOperator == "" {
-            prevNum = Double (currentNumber)!
+            print(total)
+            prevNum = float_t (currentNumber)!
             currentNumber = ""
         }
         else if lastOperator != "" {
             if lastOperator == "+" {
-                total = prevNum + Double (currentNumber)!
+                total = prevNum + Float (currentNumber)!
                 displayString = String (total)
                 prevNum = total
                 currentNumber = ""
             } else if lastOperator == "-" {
-                total = prevNum - Double (currentNumber)!
+                total = prevNum - Float (currentNumber)!
                 displayString = String (total)
                 prevNum = total
                 currentNumber = ""
             } else if lastOperator == "*" {
-                total = prevNum * Double (currentNumber)!
+                total = prevNum * Float (currentNumber)!
                 displayString = String (total)
                 prevNum = total
                 currentNumber = ""
             } else if lastOperator == "/" {
-                total = prevNum / Double (currentNumber)!
+                total = prevNum / Float (currentNumber)!
                 displayString = String (total)
                 prevNum = total
                 currentNumber = ""
             } else if lastOperator == "^" {
-                total = pow(prevNum, Double (currentNumber)!)
+                total = pow(prevNum, Float (currentNumber)!)
                 displayString = String (total)
                 prevNum = total
                 currentNumber = ""
@@ -135,10 +136,9 @@ class ViewController: UIViewController {
      */
     @IBAction func equalButtonPressed(sender: AnyObject) {
         if currentNumber == "" || lastButtonPushed == "+" || lastButtonPushed == "-" || lastButtonPushed == "*" || lastButtonPushed == "/" || lastButtonPushed == "^" || buttonsClicked == 0 {
-            print(2+(-2))
             displayLabel.text = displayLabel.text
         } else if lastOperator == "" {
-            total = Double (displayString)!
+            total = Float (displayString)!
             displayLabel.text = displayString
         } else {
             checkCalc()
